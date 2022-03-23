@@ -4,19 +4,19 @@
 void main()
 {
    
-    char *src="hello llo llo llo world"; //定义字符串1
+    char *s="hello ,I like the world"; //定义字符串1
     
-    char *dist= "llo";//定义字符串2
+    char *d= "hello";//定义字符串2
     int count = 0; 
-    char *ret = strstr(src, dist);
+    char *ret = strstr(s, d);
    
 	while (ret != NULL)//使用while判断返回值是否为NULL
     {
         count += 1;//每判断一次截断一个字符串2
         
-        ret += strlen(dist);//再次调用strstr函数判断
+        ret += strlen(d);//再次调用strstr函数判断
         
-        ret = strstr(ret, dist);
+        ret = strstr(ret, d);
     }
     
     printf("%d\n", count);//出现的次数
